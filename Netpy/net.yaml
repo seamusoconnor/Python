@@ -1,0 +1,50 @@
+
+
+a1:
+  dev: cisco_ios
+  ip: 192.168.1.221
+  user: cisco
+  pass: cisco
+
+a2:
+  dev: cisco_ios
+  ip: 192.168.1.222
+  user: cisco
+  pass: cisco
+
+a3:
+  dev: cisco_ios
+  ip: 192.168.1.223
+  user: cisco
+  pass: cisco
+
+a4:
+  dev: cisco_ios
+  ip: 192.168.1.224
+  user: cisco
+  pass: cisco
+
+a5:
+  dev: cisco_ios
+  ip: 192.168.1.225
+  user: cisco
+  pass: cisco
+
+
+d1:
+  dev: cisco_ios
+  ip: 192.168.1.231
+  user: cisco
+  pass: cisco 
+
+d2:
+  dev: cisco_ios
+  ip: 192.168.1.232
+  user: cisco
+  pass: cisco
+
+d3:
+  dev: cisco_ios
+  ip: 192.168.1.233
+  user: cisco
+  pass: cisco
