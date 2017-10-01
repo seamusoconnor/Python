@@ -1,0 +1,293 @@
+Building configuration...
+
+Current configuration : 6337 bytes
+!
+version 12.2
+no service pad
+service timestamps debug uptime
+service timestamps log uptime
+no service password-encryption
+!
+hostname D2
+!
+!
+username cisco password 0 cisco
+aaa new-model
+!
+aaa session-id common
+ip subnet-zero
+ip domain-name cisco
+ip name-server 192.168.1.21
+!
+ip ssh time-out 60
+ip ssh authentication-retries 2
+!
+!
+crypto pki trustpoint TP-self-signed-2428152704
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-2428152704
+ revocation-check none
+ rsakeypair TP-self-signed-2428152704
+!
+!
+crypto ca certificate chain TP-self-signed-2428152704
+ certificate self-signed 01
+  30820272 308201DB A0030201 02020101 300D0609 2A864886 F70D0101 04050030 
+  4A312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 32343238 31353237 30343117 30150609 2A864886 F70D0109 
+  02160844 322E6369 73636F30 1E170D39 33303330 31303030 3131355A 170D3230 
+  30313031 30303030 30305A30 4A312F30 2D060355 04031326 494F532D 53656C66 
+  2D536967 6E65642D 43657274 69666963 6174652D 32343238 31353237 30343117 
+  30150609 2A864886 F70D0109 02160844 322E6369 73636F30 819F300D 06092A86 
+  4886F70D 01010105 0003818D 00308189 02818100 F2CDD157 42FB75A1 7F62B0D2 
+  A81D3632 9A3A217B EDA634A3 7DE21C4B 2C52659F 0C969A4E D3189794 AEE6F4B3 
+  CD46C4DA 2FF0C68C FD099842 E4B926EE 173614E2 FBB3AF9E 0B50036D 1DFE89AA 
+  86B09643 B84034F1 EB1ECCA4 A96D5480 DDFED891 A49F90AC A5234AED 5F7A6B3A 
+  F84F379A E4833C27 5F27B42B 6B38A550 691EAD45 02030100 01A36830 66300F06 
+  03551D13 0101FF04 05300301 01FF3013 0603551D 11040C30 0A820844 322E6369 
+  73636F30 1F060355 1D230418 30168014 00B2137A C5E9DA8E 211D04EE 5150B3E7 
+  D545ED70 301D0603 551D0E04 16041400 B2137AC5 E9DA8E21 1D04EE51 50B3E7D5 
+  45ED7030 0D06092A 864886F7 0D010104 05000381 8100459A E865C90C A74F35FC 
+  AB4C33DF 5DBB2692 39B1915B 55BEF268 B0F4CC88 0235FE21 BFE77293 EC5534AB 
+  665E5EC1 C7E279E6 E23C2C7D 501D5687 3DEB9838 4F0339B3 F50E0415 D24C9489 
+  A9A0CF55 B0C23773 364E0EAC 645097FF D3725D88 D8671797 9C29D5F2 F1EF79EF 
+  537835C7 9B0943C4 EAE3EB28 53BE5911 E5558743 3EFE
+  quit
+!
+!
+no file verify auto
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+!
+interface FastEthernet0/1
+ switchport mode dynamic desirable
+ shutdown
+!
+interface FastEthernet0/2
+ switchport mode dynamic desirable
+ shutdown
+!
+interface FastEthernet0/3
+ switchport mode dynamic desirable
+ shutdown
+!
+interface FastEthernet0/4
+ switchport mode dynamic desirable
+ shutdown
+!
+interface FastEthernet0/5
+ switchport mode dynamic desirable
+ shutdown
+!
+interface FastEthernet0/6
+ switchport mode dynamic desirable
+ shutdown
+!
+interface FastEthernet0/7
+ switchport mode dynamic desirable
+ shutdown
+!
+interface FastEthernet0/8
+ switchport mode dynamic desirable
+ shutdown
+!
+interface FastEthernet0/9
+ switchport mode dynamic desirable
+ shutdown
+!
+interface FastEthernet0/10
+ switchport mode dynamic desirable
+ shutdown
+!
+interface FastEthernet0/11
+ switchport mode dynamic desirable
+ shutdown
+!
+interface FastEthernet0/12
+ switchport mode dynamic desirable
+ shutdown
+!
+interface FastEthernet0/13
+ switchport mode dynamic desirable
+ shutdown
+!
+interface FastEthernet0/14
+ switchport mode dynamic desirable
+ shutdown
+!
+interface FastEthernet0/15
+ switchport mode dynamic desirable
+ shutdown
+!
+interface FastEthernet0/16
+ switchport mode dynamic desirable
+ shutdown
+!
+interface FastEthernet0/17
+ switchport mode dynamic desirable
+ shutdown
+!
+interface FastEthernet0/18
+ switchport mode dynamic desirable
+ shutdown
+!
+interface FastEthernet0/19
+ switchport mode dynamic desirable
+ shutdown
+!
+interface FastEthernet0/20
+ switchport mode dynamic desirable
+ shutdown
+!
+interface FastEthernet0/21
+ switchport mode dynamic desirable
+ shutdown
+!
+interface FastEthernet0/22
+ switchport mode dynamic desirable
+ shutdown
+!
+interface FastEthernet0/23
+ switchport mode dynamic desirable
+ shutdown
+!
+interface FastEthernet0/24
+ switchport mode dynamic desirable
+ shutdown
+!
+interface FastEthernet0/25
+ switchport mode dynamic desirable
+ shutdown
+!
+interface FastEthernet0/26
+ switchport mode dynamic desirable
+ shutdown
+!
+interface FastEthernet0/27
+ switchport mode dynamic desirable
+ shutdown
+!
+interface FastEthernet0/28
+ switchport mode dynamic desirable
+ shutdown
+!
+interface FastEthernet0/29
+ switchport mode dynamic desirable
+ shutdown
+!
+interface FastEthernet0/30
+ switchport mode dynamic desirable
+ shutdown
+!
+interface FastEthernet0/31
+ switchport mode dynamic desirable
+ shutdown
+!
+interface FastEthernet0/32
+ switchport mode dynamic desirable
+ shutdown
+!
+interface FastEthernet0/33
+ switchport mode dynamic desirable
+ shutdown
+!
+interface FastEthernet0/34
+ switchport mode dynamic desirable
+ shutdown
+!
+interface FastEthernet0/35
+ switchport mode dynamic desirable
+ shutdown
+!
+interface FastEthernet0/36
+ switchport mode dynamic desirable
+ shutdown
+!
+interface FastEthernet0/37
+ switchport mode dynamic desirable
+ shutdown
+!
+interface FastEthernet0/38
+ switchport mode dynamic desirable
+ shutdown
+!
+interface FastEthernet0/39
+ switchport mode dynamic desirable
+ shutdown
+!
+interface FastEthernet0/40
+ switchport mode dynamic desirable
+ shutdown
+!
+interface FastEthernet0/41
+ switchport mode dynamic desirable
+ shutdown
+!
+interface FastEthernet0/42
+ switchport mode dynamic desirable
+ shutdown
+!
+interface FastEthernet0/43
+ switchport mode dynamic desirable
+ shutdown
+!
+interface FastEthernet0/44
+ switchport mode dynamic desirable
+ shutdown
+!
+interface FastEthernet0/45
+ switchport mode dynamic desirable
+ shutdown
+!
+interface FastEthernet0/46
+ switchport mode dynamic desirable
+ shutdown
+!
+interface FastEthernet0/47
+ switchport mode dynamic desirable
+ shutdown
+!
+interface FastEthernet0/48
+ switchport mode dynamic desirable
+ duplex half
+!
+interface GigabitEthernet0/1
+ switchport mode dynamic desirable
+ shutdown
+!
+interface GigabitEthernet0/2
+ switchport mode dynamic desirable
+ shutdown
+!
+interface Vlan1
+ ip address 192.168.1.232 255.255.255.0
+!
+ip default-gateway 192.168.1.1
+ip classless
+ip http server
+ip http secure-server
+!
+!
+radius-server source-ports 1645-1646
+!
+control-plane
+!
+!
+line con 0
+ password cisco
+ logging synchronous
+line vty 0 4
+ privilege level 15
+ password cisco
+ logging synchronous
+ transport input telnet
+line vty 5 15
+ privilege level 15
+ password cisco
+ logging synchronous
+!
+!
+end
