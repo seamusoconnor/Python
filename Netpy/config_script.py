@@ -39,5 +39,16 @@ file = open("configuration.txt", "w")
 file.write(output)
 file.close()
 
+config = open("configuration.txt", 'r')
+read = config.read()
+lines = read.splitlines()
+
+for line in lines:
+    if line startswith("interface"):
+        print line
+
+
+
+
 
 exit()
