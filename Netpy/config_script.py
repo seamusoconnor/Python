@@ -35,5 +35,9 @@ else:
 output = net_connect.send_command ("show run") # send raw_input as command to device
 print output # prints the results of the raw input you entered to the remote device
 
+file = open.("configuration.txt", "w")
+file.write(output)
+file.close()
+
 
 exit()
