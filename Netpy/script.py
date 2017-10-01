@@ -1,4 +1,4 @@
-    import os, time, yaml #Imports various libraries to work with
+import os, time, yaml #Imports various libraries to work with
 from netmiko import ConnectHandler #from netmiko library, import SSH ConnectHandler
 
 os.system('clear') # Clears the screen
