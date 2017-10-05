@@ -44,7 +44,7 @@ read = config.read()
 lines = read.splitlines()
 
 for line in lines:
-    if line startswith("interface"):
+    if line.startswith("interface"):
         print line
 
 
