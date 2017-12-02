@@ -1,7 +1,5 @@
 from sys import argv
 
-
-
 def main(a, b):
     a = int(a); b = int(b)
 
@@ -12,7 +10,7 @@ def main(a, b):
     division = div(a,b);print ('The division of {} and {} is: ').format (a,b), division
 
 def sqr(a,b):
-    square = a*b    
+    square = a*b
     return square
 
 def plu(a,b):
