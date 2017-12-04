@@ -1,26 +1,21 @@
 from netmiko import ConnectHandler
 import re
 
-net_connect = ConnectHandler(device_type='cisco_ios', ip='192.168.1.232', username='cisco', password='cisco')
+#mode = net_connect.find_prompt()
+
+def get_config():
+    net_connect = ConnectHandler(device_type='cisco_ios', ip='192.168.1.12', username='cisco', password='cisco', secret='cisco')
+    net_connect.enable()
+    mode = net_connect.find_prompt()
+    print (mode)
+    output = net_connect.send_command('sh run').splitlines()
+    net_connect.disconnect()
+    return output
 
 
+output = get_config()
 
-mode = net_connect.find_prompt()
-print mode
-
-output = net_connect.send_command('sh mac-address-table').splitlines()
-
-for line in output:
-    if re.findall(r'000f\.[90ba]\.[ab8a]', line):
-        print line
-
-
-
-
-
-
-
-net_connect.disconnect()
+print (output)
 
 
 
