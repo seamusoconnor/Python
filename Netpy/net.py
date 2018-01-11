@@ -1,21 +1,42 @@
 from netmiko import ConnectHandler
 import re
+from sys import argv
+
+script, command = argv
 
 #mode = net_connect.find_prompt()
 
-def get_config():
-    net_connect = ConnectHandler(device_type='cisco_ios', ip='192.168.1.12', username='cisco', password='cisco', secret='cisco')
+def get_config(command):
+    net_connect = ConnectHandler(device_type='cisco_ios', ip='192.168.1.15', username='cisco', password='cisco', secret='cisco')
+    mode = net_connect.find_prompt()
+    print (mode)
     net_connect.enable()
     mode = net_connect.find_prompt()
     print (mode)
-    output = net_connect.send_command('sh run').splitlines()
+    output = net_connect.send_command(command).splitlines()
     net_connect.disconnect()
     return output
 
+def file_write(output):
+    print('inside loop')
+    file = open('netfile.txt','w')
+    file.write(output)
+    file.close()
 
-output = get_config()
+output = get_config(command)
+#file_write(output)
 
 print (output)
+
+
+
+
+
+
+
+
+
+
 
 
 
