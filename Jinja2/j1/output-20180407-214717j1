@@ -1,0 +1,13 @@
+Hello Entering router router 1.........
+
+
+configure terminal
+
+interface description
+This is interface jrp1
+
+interface description
+This is interface jrp2
+
+exit
+copy run start

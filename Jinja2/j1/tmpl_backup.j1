@@ -1,0 +1,10 @@
+Hello Entering router {{dev}}.........
+
+
+configure terminal
+{% for int in interface_list %}
+interface description
+This is interface jrp{{int}}
+{% endfor %}
+exit
+copy run start
