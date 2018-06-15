@@ -1,20 +1,3 @@
-from jinja2 import Template
-import yaml
-from sys import argv
-import time
-
-script, CTT = argv
-
-
-file = open ('tmpl.j1','r')
-tmpl = file.read()
-
-var_file = open("var.j1","r")
-var = yaml.load(var_file.read())
-
-device = var['device_name']
-var_interfaces = var['interfaces']
-interfaces = var_interfaces.split(",")
 
 
 t = Template(tmpl)
