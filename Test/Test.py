@@ -28,4 +28,3 @@ class calc(object):
     def plusser(self, value):
         self.value = value+value
         return self.value
-
