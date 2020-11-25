@@ -3,7 +3,7 @@
 
 def next_happy_year(year) -> int:
     """
-    A function that takes a positive integer between 1000 and 9000
+    A function that takes a positive integer between 1000 and 9999
     and returns the next 'Heppy Year' (no duplicate numbers)
 
     Parameters:
